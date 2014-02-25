@@ -1,0 +1,176 @@
+\chapter{Ideas}
+
+\begin{itemize}
+\item Non-projective threefold (Hironaka's example)
+\item Non-projective surface (singular, see Vakil)
+\item A curve with a non-smoothable singularity
+\item A curve with non-planar singularity (maybe give an example with arbitrary dimensional tangent space)
+\item Examples of plane singularities; it is not hard to write down specific examples with any torus knot; give an example with a cable of a torus knot
+\item Lines on a quadric in $\Pbb^3$ and $\Pbb^4$
+\item Variety whose effective cone is not polygonal
+\item Nef divisor which is not effective
+\item Several examples of semistable reduction for curves
+\item A complex manifold which is not algebraic (e.g., a torus) (see Shafarevich for more ideas)
+\item Monodromy of 27 lines on a cubic surface
+\item Monodromy of 2 rulings on smooth quadric surface degenerating to a cone
+\item Classify length 2 and 3 schemes (see Geometry of Schemes)
+\item Symmetric products versus Hilbert schemes of points
+\item Explain why symmetric products of curves are smooth, but this is not true for higher dimensions
+\item Examples which illustrate behavior specific to schemes
+\item Examples which illustrate behavior specific to stacks (Deligne-Mumford, Artin) (see Introduction in Knutson, Algebraic spaces)
+\item Interesting things about curves
+\item Interesting things about hypersurfaces
+\item Triple, quadruple covers, etc
+\item Cyclic covers
+\item Explicit examples of resolutions of singularities, especially emphasizing the differences between the classes of singularities coming from MMP
+\item Explain why hypersurfaces of small degree are uniruled
+\item Explain why locally free in the Zariski and \'etale topologies is equivalent (related to Hilbert theorem 90)
+\end{itemize}
+
+\section{Non-planar curve singularities}
+
+It is easy to construct a variety of dimension 1 whose tangent space at a given point has arbitrary dimension $n \geq 1$. For example, consider the union of $n$ lines in $\Abb^n$, all passing through a given point $p \in \Abb^n$, whose tangent spaces span the ambient tangent space $T_p \Abb^n$. To be concrete, let $x_1, \dots, x_n$ be global coordinates on $\Abb^n$; take $I_i = (x_1, \dots, \what{x}_i, \dots, x_n) \subset k[x_1, \dots, x_n]$, $L_i = V(I_i)$, and $p = (0, \dots, 0)$. At the origin $p$, the variety $C = \bigcup_{i=1}^n L_i = V(I_1 \cdots I_n)$ has tangent space
+\[
+T_p C =
+\sum_{i=1}^n T_p L_i =
+\sum_{i=1}^n k \left\langle \frac{\d}{\d x_i} \right\rangle =
+k \left\langle \frac{\d}{\d x_1}, \dots, \frac{\d}{\d x_n} \right\rangle =
+T_p \Abb^n
+\]
+of dimension $n$.
+
+TODO: Diagram
+
+It is not too much harder to come up with an irreducible curve whose tangent space has arbitrary dimension.
+
+
+
+TODO
+
+
+\section{Planar curve singularities}
+
+TODO
+
+
+\section{Vector bundle which does not extend}
+
+We will exhibit an example of a vector bundle $E$ on an open subset $U$ of a variety $X$ which does not extend to all of $X$.
+
+Let $E'$ be a vector bundle on $\Pbb^2$ which does not split into a direct sum of line bundles. To be more concrete, take the tangent bundle $E' = T_{\Pbb^2}$. Consider $\Abb^3$ and the open subset $\Abb^3 \setminus \{0\}$. Let $\pi \cn \Abb^3 \setminus \{0\} \rarr \Pbb^2$ be the natural projection map. We claim the vector bundle $E = \pi^\ast E'$ does not extend to $\Abb^3$. If it did, it has to be trivial (TODO: Reference to Quillen-Suslin). In particular, it would split which is not the case. (TODO: Elucidate the connection between $\Pbb^2$ and $\Abb^3 \setminus \{0\}$ better here.)
+
+Note that $E$ extends to a vector bundle on $\Bl_{0} \Abb^3$ since the projection map extends to a map $\Bl_0 \Abb^3 \rarr \Pbb^2$.
+
+\begin{remark}
+  While we are providing a sort of counterexample, it would be interesting to investigate this problem more closely. For example, given a coherent sheaf $E$ on $X$ which is a vector bundle on $U$, there always exists a blowup $X'$ of $X$ with center in $X \setminus U$ such that $E|_U$ extends to a vector bundle over $X'$ \cite[Theorem 4.1]{Raynaud-Flat-modules}. Is there a way to carry this process in a canonical fashion?
+\end{remark}
+
+
+\section{An explanation why $T_{\mathbb{P}^2}$ does not split}
+
+There are (at least) two heavy\--machinery reasons for this. One is that $T_{\mathbb{P}^2}$ is a stable vector bundle on $\mathbb{P}^2$, and stable bundles are simple (i.e.\ their endomorphisms are all homotheties) and therefore do not split. This last implication is easy to explain: if $E$ splits as ${E=E_1\oplus E_2}$, then it admits for instance the endomorphism ${(x_1,x_2)\mapsto(x_1,0)}$, which is not a homothety.
+
+The other is Horrocks criterion for splitting of vector bundles on the projective space \cite{Horrocks-Punctured-spectrum}. A vector bundle $E$ on $\mathbb{P}^n$ splits if and only if it has no intermediate cohomology, i.e.\ ${\H^i\big(\mathbb{P}^n,E(a)\big)=0}$ for all ${i\notin\{0,n\}}$ and all ${a\in\mathbb{Z}}$. If we consider the dual of the Euler sequence and twist it by ${\mathcal{O}_{\mathbb{P}^2}(-3)}$ we obtain the sequence
+\[\xymatrix{0\ar[r] &\mathcal{O}_{\mathbb{P}^2}(-3)\ar[r] 
+  &\mathcal{O}_{\mathbb{P}^2}(-2)^2\ar[r]
+  &T_{\mathbb{P}^2}(-3)\ar[r] &0.}\]
+We can take cohomology and since
+\[
+{h^1\big(\mathcal{O}_{\mathbb{P}^2}(-2)^2\big)=h^2\big(\mathcal{O}_{\mathbb{P}^2}(-2)^2\big)=0},
+\]
+we get
+\[
+{\H^1\big(T_{\mathbb{P}^2}(-3)\big)\cong \H^2\big(\mathcal{O}_{\mathbb{P}^2}(-3)\big)\cong k}.
+\]
+
+For a definition of stable bundles and the result that they are simple, see chapter~II, section 1 in \cite{OSS-Vector-bundles}; for Horrocks criterion, see chapter~I, section 2.3.  
+
+
+\section{Double covers}
+
+Let $X$ be a variety (smooth over an algebraically closed field $k$ of characteristic $0$). We would like to describe the set of (potentially ramified) double covers $\pi \cn Y \rarr X$.
+
+Start by observing these correspond naturally to flat, locally free rank 2 $\Oc_X$-algebras $\Ac$. Given a cover $\pi \cn Y \rarr X$, we construct such a sheaf by $\Ac = \pi_\ast \Oc_Y$. Conversely, given a sheaf of algebras, taking $\Spec$ furnishes a cover. Therefore, it suffices to study such $\Oc_X$-algebras.
+
+The unit in such an $\Oc_X$-algebra $\Ac$, gives an embedding $i \cn \Oc_X \rarr \Ac$. This map admits a splitting
+\[
+s = \frac{1}{2} \Tr \cn \Ac \rarr \Oc_X.
+\]
+It is best to illustrate the trace map when $X = \Spec k$ and $\Ac = \wtilde{A}$ is a length 2 algebra over $k$. In simple terms, $A$ is a dimension $2$ vector space over $k$. Multiplication by an element $x \in A$ induces an endomorphism $x \cdot \cn A \rarr A$. The trace map $\Tr \cn A \rarr k$ is defined as the trace of this endomorphism, namely,
+\[
+\Tr(x) = \Tr( x \cdot \cn A \rarr A ).
+\]
+We are using the fact $\Tr(1_A) = \dim_k A = 2$, so $s = 1/2 \Tr$ splits the inclusion $k \hrarr A$. Note that $1/n \Tr$ defines a splitting for any length $n$ algebra.
+
+Back to a general base $X$, we have constructed a split short exact sequence
+\[\xymatrix{
+  0 \ar[r] &
+  \Oc_X \ar[r]^-{i} &
+  \Ac \ar@/^/[l]^-{s} \ar[r] &
+  \wtilde{\Ac} \ar[r] &
+  0.
+}\]
+Since $\Ac = \Oc_X \oplus \wtilde{\Ac}$ is locally free of rank $2$, it follows that $L = \wtilde{\Ac}$ is a line bundle. The multiplication map $\mu \cn \Ac \otimes \Ac \rarr \Ac$, can be written as a quadruple of morphisms
+\[
+\Oc_X \otimes \Oc_X \rarr \Ac, \qquad
+\Oc_X \otimes L \rarr \Ac, \qquad
+L \otimes \Oc_X \rarr \Ac, \qquad
+L \otimes L \rarr \Ac.
+\]
+The first three of these are uniquely determined by the fact $\Oc_X \subset \Ac$ is the subsheaf spanned by the unit. The last one can further be decomposed into a pair of morphisms
+\[
+L \otimes L \rarr \Oc_X, \qquad
+L \otimes L \rarr L.
+\]
+We claim that working with double covers forces $L \otimes L \rarr L$ to be the zero map. Again, it is best to see this by looking one point at a time.
+
+There are two isomorphism classes of length 2 algebras, namely $A_1 = k \x k$ and $A_2 = k[\epsilon]/(\epsilon^2)$. The subspaces of trace-free elements (analogues of $L$ above) in each are given by
+\[
+L_1 = k \cdot (1,-1) \subset A_1, \qquad
+L_2 = k \cdot \epsilon \subset A_2.
+\]
+In the first case, the product $(1,-1) \cdot (1,-1) = (1,1)$ has projection $0$ in the trace-free part. In the second case $\epsilon \cdot \epsilon = 0$, so there is no need to project. In each of the two cases, the map $L_i \otimes L_i \rarr L_i$ is zero. Note that the map $L_i \otimes L_i \rarr k$ is zero only in the second case. Geometrically, $A_1$ corresponds to reduced fiber of two points, while $A_2$ to a point of ramification. We will later use this observation to detect the ramification locus.
+
+Returning to a general base, the multiplication map $\Ac \otimes \Ac \rarr \Ac$ is determined by a map $\sigma \cn L \otimes L \rarr \Oc_X$. Conversely, it is not hard to check that any map $\sigma \cn L \otimes L \rarr \Oc_X$ can be augmented to give a commutative, associative $\Oc_X$-algebra structure on $\Ac = \Oc_X \oplus L$, the isomorphism type of the algebra depends only on $\sigma$ up to scaling. Finally, we can take duals to get
+\[
+\sigma^\vee \cn \Oc_X \rarr L^{-2}.
+\]
+Up to scaling this is the same as a divisor $D$ in the linear system $|L^{-2}|$. Note that $D$ is the vanishing locus of $\sigma^\vee$ and $\sigma$, hence also the ramification locus of the corresponding double cover $\Spec(\Oc_X \otimes L) \rarr X$. We can replace $L$ with $L^{-1}$ for convenience to obtain the result as it is commonly stated.
+
+\begin{proposition}
+  A pair $(L,D)$ consisting of a line bundle $L \in \Pic(X)$ together with a divisor $D \in |L^2|$ determine a double cover, and conversely. The ramification divisor of the cover corresponding to a pair $(L,D)$ is $D$.
+\end{proposition}
+
+We can use this result to derive a useful corollary.
+
+\begin{corollary}
+  Unramified double covers of $X$ are in a correspondence with 2-torsion elements of $\Pic(X)$.
+\end{corollary}
+
+TODO: The following paragraph required revision.
+
+Given a pair $(L,D)$ as above, there is an alternative geometric construction of the associated double cover. Start by using $D$ to produce a map $f \cn X \rarr \Pbb^1$ such that $D = [f^{-1}(0)] - [f^{-1}(\infty)]$. It is easy to construct a double cover $C \rarr \Pbb^1$ with unique ramification over $0$ and $\infty$. The fiber product $Y = X \x_\Pbb^2 C \rarr X$ is the desired double cover.
+\[\xymatrix{
+  Y = X \x_{\Pbb^1} C \ar[r] \ar[d] & C \ar[d] \\
+  X \ar[r] & \Pbb^1
+}\]
+
+
+\section{The scroll $\Fbb(a_1, \dots, a_n)$ as a quotient}
+
+It is customary to construct the scroll $\Fbb(a_1, \dots, a_n)$ as the projectivization $\Pbb E$ of the vector bundle
+\[
+E = \Oc(a_1) \oplus \cdots \oplus \Oc(a_n)
+\]
+over $\Pbb^1$. Alternatively, it is also possible to construct this space as the quotient of $(\Abb^2 \setminus 0) \x (\Abb^n \setminus 0)$ by an action of the algebraic group $\Gbb_m \x \Gbb_m$. In coordinates, the action is given by
+\[
+(\lambda, \mu) \cdot (t_1, t_2, x_1, \dots, x_n) =
+(\lambda t_1, \lambda t_2, \mu \lambda^{-a_1} x_1, \dots, \mu \lambda^{-a_n} x_n).
+\]
+For more details on both points of view, see \cite[Chapter 2]{Reid-surfaces}.
+
+
+%%% Local Variables: 
+%%% mode: latex
+%%% TeX-master: "ag-examples"
+%%% End: 

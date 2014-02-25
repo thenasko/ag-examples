@@ -1,0 +1,53 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+<link rel="icon" type="image/vnd.microsoft.icon" href="stacks.ico" />
+<title>Examples in Algebraic Geometry</title>
+<link rel="stylesheet" type="text/css" href="ag-examples.css"/>
+</head>
+
+<body>
+
+<div class="page">
+
+<div class="page_header">
+Examples in Algebraic Geometry
+<a href="index.html">(main page)</a>
+</div>
+
+<div class="title">
+Contributors
+</div>
+
+
+<div class="index_include">
+
+<table>
+
+<tr>
+<th>Name</th>
+<th>Email</th>
+</tr>
+
+{{CONTRIBUTORS}}
+
+</table>
+
+</div>
+
+<div class="page_footer">
+<span>
+The design of this page was derived from the <a href="http://www.math.columbia.edu/algebraic_geometry/stacks-git/">Stacks project</a>.
+</span>
+
+<span>
+Return to my <a href="http://math.harvard.edu/~nasko">homepage</a>.
+</span>
+</div>
+
+
+</div>
+
+
+</body>
+</html> 
