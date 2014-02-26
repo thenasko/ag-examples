@@ -3,7 +3,7 @@ Contributors
 
 | Name | Email |
 |------|-------|
-| Atanas Atanasov | [nasko (guess) math (dot) harvard (dot) edu](nasko (guess) math (dot) harvard (dot) edu) |
-| Eric Riedl | [ebriedl (guess) math (dot) harvard (dot) edu](ebriedl (guess) math (dot) harvard (dot) edu) |
-| Bhargav Bhatt | [bhargav (dot) bhatt (guess) gmail (dot) edu](bhargav (dot) bhatt (guess) gmail (dot) edu) |
-| Pedro Macias Marques | [pmm (guess) uevora (dot) pt](pmm (guess) uevora (dot) pt) |
+| Atanas Atanasov | [nasko (guess) math.harvard.edu](nasko (guess) math.harvard.edu) |
+| Eric Riedl | [ebriedl (guess) math.harvard.edu](ebriedl (guess) math.harvard.edu) |
+| Bhargav Bhatt | [bhargav.bhatt (guess) gmail.edu](bhargav.bhatt (guess) gmail.edu) |
+| Pedro Macias Marques | [pmm (guess) uevora.pt](pmm (guess) uevora.pt) |
