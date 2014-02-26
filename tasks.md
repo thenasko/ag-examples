@@ -3,15 +3,9 @@ Tasks
 
 The most significant part of this project is collecting and organizing suitable examples in algebraic geometry. Even so, there are tasks which have nothing or very little to do with mathematics. Below is a list of items which should be added or need improvement.
 
-* Currently the navigation of the website is a little rough. It would be better to optimize the way pages link to each other.
-
-* The bottom-most line could use some re-organization.
-
-* The website has no favicon.
-
 * The licensing of the project should be finalized.
 
-* We have no dedicated email address.
+* Move to a dedicated github account and email address.
 
 * A blog or mailing list could make collaboration easier.
 

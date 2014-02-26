@@ -1,4 +1,8 @@
+# Please run publish-contributors after changing this file. It updates
+# controbutors.md and ag-examples-contributors.tex. Keep names ordered
+# alphabetically by surname.
+
 Atanas Atanasov,nasko (guess) math.harvard.edu
-Eric Riedl,ebriedl (guess) math.harvard.edu
 Bhargav Bhatt,bhargav.bhatt (guess) gmail.edu
 Pedro Macias Marques,pmm (guess) uevora.pt
+Eric Riedl,ebriedl (guess) math.harvard.edu
