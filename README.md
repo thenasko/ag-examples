@@ -12,7 +12,7 @@ There are many beautiful, intructional, and inspiring examples in algebraic geom
 How to contribute
 -----------
 
-This project is the product of collaborative effort. A list of contributors is maintained [here](contributors).
+This project is the product of collaborative effort. A list of contributors is maintained [here](contributors.md).
 
 Since the content is split into small sections, contributing is very easy. Almost any material from expository papers, short notes, blog posts, and others can be incorporated. We are also looking for people who can help editing the content. Separately, there are many small, non-mathematical tasks that need to be completed. A list of these is maintained [here](tasks.md).
 
@@ -22,10 +22,7 @@ If you are interested in helping, please email [nasko (guess) math.harvard.edu](
 Download
 -----------
 
-You can download the entire project in one file [here](ag-examples.pdf).
-<!--
-You can also browse the source tree <a href="ag-examples/">here</a>.
--->
+You can download the entire project in one file [here](https://github.com/thenasko/ag-examples/raw/master/ag-examples.pdf).
 
 
 Philosophy
@@ -39,10 +36,5 @@ License
 
 The licensing of this project is currently work in progress.
 <!--
-TODO: Figure this out
-TODO: Change icon
-TODO: Fix browsing the source tree
-TODO: Change email on website
-
 This project is licensed under the GNU Free Documentation License, see <a href="COPYING">here</a>.
 -->
