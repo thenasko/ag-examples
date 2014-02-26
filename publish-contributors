@@ -1,7 +1,7 @@
 #!/bin/bash
 
-list=$(awk -F, 'BEGIN{ styles[0] = "light"; styles[1] = "dark"; } { print "<tr class=\"" styles[NR%2] "\"> <td>" $1 "</td> <td> <a=href\"" $2 "\">" $2 "</a> </td> </tr>" }' contributors)
+list=$(awk -F, '{ print "| " $1 " | [" $2 "](" $2 ") |" }' contributors)
 
-awk -v list="$list" '{ if ($0 == "{{CONTRIBUTORS}}") { print list; } else { print; } }' contributors.html-template > contributors.html
+awk -v list="$list" '{ if ($0 == "{{CONTRIBUTORS}}") { print list; } else { print; } }' contributors.md-template > contributors.md
 
 awk -F, '{ print "\\author{" $1 "}" }' contributors > ag-examples-contributors.tex
