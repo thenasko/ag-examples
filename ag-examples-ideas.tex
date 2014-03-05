@@ -40,18 +40,30 @@ T_p \Abb^n
 \]
 of dimension $n$.
 
-It is not too much harder to come up with an irreducible curve whose tangent space has arbitrary dimension.
-
-TODO
+It is not much harder to come up with an irreducible curve whose tangent space has arbitrary dimension $n$. For example, we can crimp the affine line. Let $k$ be a field and consider the subring
+\[
+R = k \langle 1, t^n, t^{n+1}, \dots \rangle
+\subset k[t].
+\]
+The ideal $m = k\langle t^n, t^{n+1}, \dots \rangle$ is maximal since $R/\m \cong k$ is a field, and
+\[
+t^n + \m^2, \dots, t^{2n-1} + \m^2
+\]
+form a basis for the cotangent space $\m/\m^2$.
 
 
 \section{Vector bundle which does not extend}
 
 We will exhibit an example of a vector bundle $E$ on an open subset $U$ of a variety $X$ which does not extend to all of $X$.
 
-Let $E'$ be a vector bundle on $\Pbb^2$ which does not split into a direct sum of line bundles. To be more concrete, take the tangent bundle $E' = T_{\Pbb^2}$. Consider $\Abb^3$ and the open subset $\Abb^3 \setminus \{0\}$. Let $\pi \cn \Abb^3 \setminus \{0\} \rarr \Pbb^2$ be the natural projection map. We claim the vector bundle $E = \pi^\ast E'$ does not extend to $\Abb^3$. If it did, it has to be trivial (TODO: Reference to Quillen-Suslin). In particular, it would split which is not the case. (TODO: Elucidate the connection between $\Pbb^2$ and $\Abb^3 \setminus \{0\}$ better here.)
+Let $E'$ be a vector bundle on $\Pbb^2$ which does not split into a direct sum of line bundles. To be more concrete, take the tangent bundle $E' = T_{\Pbb^2}$. Consider $\Abb^3$ and the open subset $\Abb^3 \setminus \{0\}$. Let $\pi \cn \Abb^3 \setminus \{0\} \rarr \Pbb^2$ be the natural projection map. We claim the vector bundle $E = \pi^\ast E'$ does not extend to $\Abb^3$. If it did, it has to be trivial (see \ref{T:Serre-problem}). In particular, it would split which is not the case.
 
-Note that $E$ extends to a vector bundle on $\Bl_{0} \Abb^3$ since the projection map extends to a map $\Bl_0 \Abb^3 \rarr \Pbb^2$.
+Since the projection $\pi \cn \Abb^3 \setminus \{0\} \rarr \Pbb^2$ expends to a regular morphism $\wtilde{\pi} \cn \Bl_0 \Abb^3 \rarr \Pbb^2$, it follows that $E$ extends $\wtilde{\pi}^\ast E'$ over $\Bl_0 \Abb^3$.
+
+\begin{remark}
+  \label{T:Serre-problem}
+  Serre's problem (also known as Serre's conjecture) asks whether every (algebraic) vector bundle over an affine space is trivial. Phrased as a question in commutative algebra, the statement is that every projective module over a polynomial ring is free. Quillen \cite{Quillen-projective-modules} and Suslin \cite{Suslin-projective-modules} independently proved the conjecture is 1976. A simpler proof, due to Leonid Vaser\u{s}te\u{i}n, can be found in \cite{Lang-algebra}.
+\end{remark}
 
 \begin{remark}
   While we are providing a sort of counterexample, it would be interesting to investigate this problem more closely. For example, given a coherent sheaf $E$ on $X$ which is a vector bundle on $U$, there always exists a blowup $X'$ of $X$ with center in $X \setminus U$ such that $E|_U$ extends to a vector bundle over $X'$ \cite[Theorem 4.1]{Raynaud-Flat-modules}. Is there a way to carry this process in a canonical fashion?
@@ -139,9 +151,8 @@ We can use this result to derive a useful corollary.
   Unramified double covers of $X$ are in a correspondence with 2-torsion elements of $\Pic(X)$.
 \end{corollary}
 
-TODO: The following paragraph required revision.
+Given a pair $(L,D)$ as above, there is an alternative geometric construction of the associated double cover. Start by using $D$ to produce a map $f \cn X \rarr \Pbb^1$ such that $D = [f^{-1}(0)] - [f^{-1}(\infty)]$. It is easy to construct a double cover $C \rarr \Pbb^1$ with unique ramification over $0$ and $\infty$. The total space of double cover corresponding to the pair $(L, D)$ is the fiber product $Y = X \x_{\Pbb^2} C \rarr X$. We realize $Y$ as a two-sheeted cover by projecting to the first factor.
 
-Given a pair $(L,D)$ as above, there is an alternative geometric construction of the associated double cover. Start by using $D$ to produce a map $f \cn X \rarr \Pbb^1$ such that $D = [f^{-1}(0)] - [f^{-1}(\infty)]$. It is easy to construct a double cover $C \rarr \Pbb^1$ with unique ramification over $0$ and $\infty$. The fiber product $Y = X \x_\Pbb^2 C \rarr X$ is the desired double cover.
 \[\xymatrix{
   Y = X \x_{\Pbb^1} C \ar[r] \ar[d] & C \ar[d] \\
   X \ar[r] & \Pbb^1
